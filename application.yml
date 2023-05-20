@@ -1,0 +1,31 @@
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/
+  instance:
+    hostname: localhost
+    #preferIpAddress: true
+
+
+spring:
+  cloud:
+    discovery:
+      enabled: true
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    
+
+

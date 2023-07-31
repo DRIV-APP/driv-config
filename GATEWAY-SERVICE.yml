@@ -5,42 +5,33 @@ spring:
   application:
     name: GATEWAY-SERVICE
     
-#   cloud:
-#     gateway:
-#       globalcors:
-#         cors-configurations:
-#           '[/**]':
-#             allowedOrigins: "*"
-#             allowedHeaders: '*'
-#             allowedMethods:
-#             - POST
-#             - GET
-#             - PUT
-#             - DELETE
-#             - OPTIONS
-#             - HEAD
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedHeaders: '*'
+            allowedMethods:
+            - POST
+            - GET
+            - PUT
+            - DELETE
+            - OPTIONS
+            - HEAD
 
-# eureka:
-#   client:
-#     fetch-registry: true
-#     register-with-eureka: true
-#     serviceUrl:
-#       defaultZone: http://62.72.0.198:8761/eureka
-#   instance:
-#     hostname: 62.72.0.198
+hystrix:
+  command:
+    fallback:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 4000
 
-# hystrix:
-#   command:
-#     fallback:
-#       execution:
-#         isolation:
-#           thread:
-#             timeoutInMilliseconds: 4000
-
-# management:
-#   endpoints:
-#     web:
-#       exposure:
-#         include: hystrix.stream
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
 
 

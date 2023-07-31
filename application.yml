@@ -44,6 +44,8 @@ spring:
     discovery:
       enabled: true
   jpa:
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.MySQL5Dialect
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect

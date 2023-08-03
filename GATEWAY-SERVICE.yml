@@ -2,7 +2,7 @@ server:
   port: 443
   ssl:
     enabled: true
-    key-store: classpath:driv_cgweb_ca.crt
+    key-store: classpath:driv.cgweb.ca.key
     #key-store-type: PKCS12
     key-store-password: Youdom@,1996
     key-password: Youdom@,1996

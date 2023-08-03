@@ -6,7 +6,7 @@ server:
     key-store-type: PKCS12
     key-store-password: Youdom@,1996
     key-password: Youdom@,1996
-    key-alias: local-ssl
+    #key-alias: local-ssl
 
 spring:
   application:

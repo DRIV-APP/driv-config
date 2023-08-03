@@ -1,12 +1,12 @@
 server:
   port: 9191
-  ssl:
-    enabled: true
-    key-store: classpath:driv.cgweb.ca.jks
-    key-store-type: JKS
-    key-store-password: Youdom@,1996
-    key-password: Youdom@,1996
-    key-alias: driv-cgweb
+  # ssl:
+  #   enabled: true
+  #   key-store: classpath:driv.cgweb.ca.jks
+  #   key-store-type: JKS
+  #   key-store-password: Youdom@,1996
+  #   key-password: Youdom@,1996
+  #   key-alias: driv-cgweb
 
 spring:
   application:

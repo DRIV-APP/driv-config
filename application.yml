@@ -2,6 +2,15 @@ springdoc:
   swagger-ui:
     path: /swagger-ui.html
 
+server:
+  ssl:
+    enabled: true
+    key-store: classpath:driv.cgweb.ca.jks
+    key-store-type: JKS
+    key-store-password: Youdom@,1996
+    key-password: Youdom@,1996
+    key-alias: driv-cgweb
+
 #### configuration PRODUCTION #####
 # eureka:
 #   client:

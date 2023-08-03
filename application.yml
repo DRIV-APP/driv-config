@@ -12,57 +12,57 @@ springdoc:
 #     key-alias: driv-cgweb
 
 #### configuration PRODUCTION #####
-# eureka:
-#   client:
-#     register-with-eureka: true
-#     fetch-registry: true
-#     service-url:
-#       defaultZone: http://62.72.0.198:8761/eureka
-#   instance:
-#     hostname: 62.72.0.198
-
-# spring:
-#   cloud:
-#     discovery:
-#       enabled: true
-#   jpa:
-#     properties:
-#       hibernate:
-#         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-#     hibernate:
-#       ddl-auto: update
-#   datasource:
-#     driver-class-name: com.mysql.cj.jdbc.Driver
-#     url: jdbc:mysql://62.72.0.198:3306/drivdb
-#     username: root
-#     password: Covoiturage@2023
-
-
-#### configuration TEST #####
 eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://62.72.0.198:8761/eureka
   instance:
-    hostname: localhost
+    hostname: 62.72.0.198
 
 spring:
   cloud:
     discovery:
       enabled: true
   jpa:
-    generate-ddl: true
-    database-platform: org.hibernate.dialect.MySQL5Dialect
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
       ddl-auto: update
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver 
-    url: jdbc:mysql://localhost:3306/drivbb
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://62.72.0.198:3306/drivdb
     username: root
+    password: Covoiturage@2023
+
+
+#### configuration TEST #####
+# eureka:
+#   client:
+#     register-with-eureka: true
+#     fetch-registry: true
+#     service-url:
+#       defaultZone: http://localhost:8761/eureka
+#   instance:
+#     hostname: localhost
+
+# spring:
+#   cloud:
+#     discovery:
+#       enabled: true
+#   jpa:
+#     generate-ddl: true
+#     database-platform: org.hibernate.dialect.MySQL5Dialect
+#     properties:
+#       hibernate:
+#         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+#     hibernate:
+#       ddl-auto: update
+#   datasource:
+#     driver-class-name: com.mysql.cj.jdbc.Driver 
+#     url: jdbc:mysql://localhost:3306/drivbb
+#     username: root
 
 

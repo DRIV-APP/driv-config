@@ -2,10 +2,11 @@ server:
   port: 443
   ssl:
     enabled: true
-    key-store: classpath:keystore.jks 
-    key-store-password: 
-    key-password: 
-    key-alias:
+    key-store: classpath:local-ssl.p12
+    key-store-type: PKCS12
+    key-store-password: Youdom@,1996
+    key-password: Youdom@,1996
+    key-alias: local-ssl.p12
 
 spring:
   application:

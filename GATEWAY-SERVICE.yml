@@ -1,5 +1,11 @@
 server:
-  port: 9191
+  port: 443
+  ssl:
+    enabled: true
+    key-store: classpath:keystore.jks 
+    key-store-password: 
+    key-password: 
+    key-alias:
 
 spring:
   application:
